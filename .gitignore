@@ -1,6 +1,2 @@
 *.tar.gz
-*.html
-*.css
-*.rss
-
-
+generated
