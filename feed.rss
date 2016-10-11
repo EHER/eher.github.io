@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel><title>BloggEher</title><link>http://eher.github.io/index.html</link>
+<description>Pieces of stuff that should be simple</description><language>en</language>
+<lastBuildDate>Tue, 11 Oct 2016 16:59:12 +0200</lastBuildDate>
+<pubDate>Tue, 11 Oct 2016 16:59:12 +0200</pubDate>
+<atom:link href="http://eher.github.io/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+This is in markdown
+</title><description><![CDATA[
+
+<p>The rest of the text file is a <strong>Markdown</strong> blog post.</p>
+
+<p>Tags: <a href='tag_eher.html'>eher</a>, <a href='tag_test.html'>test</a></p>
+
+<!-- text end -->
+]]></description><link>http://eher.github.io/this-is-in-markdown27327.html</link>
+<guid>http://eher.github.io/./this-is-in-markdown27327.html</guid>
+<dc:creator>Alexandre Eher</dc:creator>
+<pubDate>Tue, 11 Oct 2016 16:59:10 +0200</pubDate></item>
+</channel></rss>
