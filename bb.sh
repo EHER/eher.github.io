@@ -17,21 +17,21 @@ global_config=".config"
 # by the 'global_config' file contents
 global_variables() {
     global_software_name="BashBlog"
-    global_software_version="2.7"
+    global_software_version="2.8"
 
     # Blog title
-    global_title="BloggEher"
+    global_title="My fancy blog"
     # The typical subtitle for each blog
-    global_description="Pieces of stuff that should be simple"
+    global_description="A blog about turtles and carrots"
     # The public base URL for this blog
-    global_url="http://eher.github.io"
+    global_url="http://example.com/blog"
 
     # Your name
-    global_author="Alexandre Eher"
+    global_author="John Smith"
     # You can use twitter or facebook or anything for global_author_url
-    global_author_url="http://twitter.com/EHER"
+    global_author_url="http://twitter.com/example" 
     # Your email
-    global_email="alexandre@eher.com.br"
+    global_email="john@smith.com"
 
     # CC by-nc-nd is a good starting point, you can change this to "&copy;" for Copyright
     global_license="CC by-nc-nd"
@@ -66,6 +66,11 @@ global_variables() {
     # global archive
     archive_index="all_posts.html"
     tags_index="all_tags.html"
+
+    # Non blogpost files. Bashblog will ignore these. Useful for static pages and custom content
+    # Add them as a bash array, e.g. non_blogpost_files=("news.html" "test.html")
+    non_blogpost_files=()
+
     # feed file (rss in this case)
     blog_feed="feed.rss"
     number_of_feed_articles="10"
@@ -109,6 +114,7 @@ global_variables() {
     template_tags_title="All tags"
     # "posts" (on "All tags" page, text at the end of each tag line, like "2. Music - 15 posts")
     template_tags_posts="posts"
+    template_tags_posts_2_4="posts"  # Some slavic languages use a different plural form for 2-4 items
     template_tags_posts_singular="post"
     # "Posts tagged" (text on a title of a page with index of one tag, like "My Blog - Posts tagged "Music"")
     template_tag_title="Posts tagged"
@@ -123,7 +129,7 @@ global_variables() {
     # "Tweet" (used as twitter text button for posting to twitter)
     template_twitter_button="Tweet"
     template_twitter_comment="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;"
-
+    
     # The locale to use for the dates displayed on screen
     date_format="%B %d, %Y"
     date_locale="C"
@@ -147,7 +153,7 @@ global_variables() {
 
     # Markdown location. Trying to autodetect by default.
     # The invocation must support the signature 'markdown_bin in.md > out.html'
-    markdown_bin=$(which Markdown.pl || which markdown)
+    [[ -f Markdown.pl ]] && markdown_bin=./Markdown.pl || markdown_bin=$(which Markdown.pl 2>/dev/null || which markdown 2>/dev/null)
 }
 
 # Check for the validity of some variables
@@ -351,9 +357,6 @@ twitter() {
 
             echo "<p id='twitter'><a href='http://twitter.com/intent/tweet?url=$1&text=$template_twitter_comment&via=$global_twitter_username'>$template_comments $template_twitter_button</a> "
             echo "<a href='$search_engine""$1'><span id='count-$id'></span></a>&nbsp;</p>"
-            # Get current tweet count
-            echo "<script type=\"text/javascript\">\$.ajax({type: \"GET\", url: \"https://cdn.api.twitter.com/1/urls/count.json?url=$1\",
-            dataType: \"jsonp\", success: function(data){ \$(\"#count-$id\").html(\"(\" + data.count + \")\"); }}); </script>"
             return;
         else 
             echo "<p id='twitter'>$template_comments&nbsp;"; 
@@ -378,6 +381,11 @@ twitter() {
 # or 1 (bash return value 'false') if it is a blogpost
 is_boilerplate_file() {
     name=${1#./}
+    # First check against user-defined non-blogpost pages
+    for item in "${non_blogpost_files[@]}"; do
+        [[ "$name" == "$item" ]] && return 0
+    done
+
     case $name in
     ( "$index_file" | "$archive_index" | "$tags_index" | "$footer_file" | "$header_file" | "$global_analytics_file" | "$prefix_tags"* )
         return 0 ;;
@@ -681,7 +689,11 @@ all_tags() {
             nposts=$(grep -c "<\!-- text begin -->" "$i")
             tagname=${i#"$prefix_tags"}
             tagname=${tagname%.html}
-            ((nposts > 1)) && word=$template_tags_posts || word=$template_tags_posts_singular
+            case $nposts in
+                1) word=$template_tags_posts_singular;;
+                2|3|4) word=$template_tags_posts_2_4;;
+                *) word=$template_tags_posts;;
+            esac
             echo "<li><a href=\"$i\">$tagname</a> &mdash; $nposts $word</li>"
         done
         echo "" 1>&3
@@ -1105,7 +1117,7 @@ do_main() {
 
     # Check for $EDITOR
     [[ -z $EDITOR ]] && 
-        echo "Please set your \$EDITOR environment variable" && exit
+        echo "Please set your \$EDITOR environment variable. For example, to use nano, add the line 'export EDITOR=nano' to your \$HOME/.bashrc file" && exit
 
     # Check for validity of argument
     [[ $1 != "reset" && $1 != "post" && $1 != "rebuild" && $1 != "list" && $1 != "edit" && $1 != "delete" && $1 != "tags" ]] && 
