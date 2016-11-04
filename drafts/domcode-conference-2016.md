@@ -1,4 +1,4 @@
-DOMCODE 2016
+DOMCODE Conference 2016
 
 # Here be dragons! What it's really like to slay a monolith
 Grahan Daniels
