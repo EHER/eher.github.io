@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>BloggEher</title><link>http://eher.github.io/index.html</link>
 <description>Pieces of stuff that should be simple</description><language>en</language>
-<lastBuildDate>Wed, 09 Nov 2016 22:22:38 +0100</lastBuildDate>
-<pubDate>Wed, 09 Nov 2016 22:22:38 +0100</pubDate>
+<lastBuildDate>Wed, 09 Nov 2016 22:25:34 +0100</lastBuildDate>
+<pubDate>Wed, 09 Nov 2016 22:25:34 +0100</pubDate>
 <atom:link href="http://eher.github.io/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Familie
@@ -72,12 +72,15 @@ Familie
 <li><a href="https://translate.google.com/#nl/en/blij">blij</a></li>
 </ul>
 
-<p>Adjectives
- - <a href="https://translate.google.com/#nl/en/verdrietig">verdrietig</a>
- - <a href="https://translate.google.com/#nl/en/groot">groot</a>
- - <a href="https://translate.google.com/#nl/en/klein">klein</a>
- - <a href="https://translate.google.com/#nl/en/leeg">leeg</a>
- - <a href="https://translate.google.com/#nl/en/vol">vol</a></p>
+<p>Adjectives</p>
+
+<ul>
+<li><a href="https://translate.google.com/#nl/en/verdrietig">verdrietig</a></li>
+<li><a href="https://translate.google.com/#nl/en/groot">groot</a></li>
+<li><a href="https://translate.google.com/#nl/en/klein">klein</a></li>
+<li><a href="https://translate.google.com/#nl/en/leeg">leeg</a></li>
+<li><a href="https://translate.google.com/#nl/en/vol">vol</a></li>
+</ul>
 
 <p>Questions</p>
 
@@ -90,7 +93,7 @@ Familie
 
 <!-- text end -->
 <p id='twitter'><a href='http://twitter.com/intent/tweet?url=http://eher.github.io/familie.html&text=&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;&via=EHER'>Comments? Tweet</a> 
-<a href='https://twitter.com/search?q=http://eher.github.io/familie.html'><span id='count-10291'></span></a>&nbsp;</p>
+<a href='https://twitter.com/search?q=http://eher.github.io/familie.html'><span id='count-4282'></span></a>&nbsp;</p>
 ]]></description><link>http://eher.github.io/familie.html</link>
 <guid>http://eher.github.io/./familie.html</guid>
 <dc:creator>Alexandre Eher</dc:creator>

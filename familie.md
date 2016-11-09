@@ -56,6 +56,7 @@ Verbs:
  - [blij](https://translate.google.com/#nl/en/blij)
 
 Adjectives
+
  - [verdrietig](https://translate.google.com/#nl/en/verdrietig)
  - [groot](https://translate.google.com/#nl/en/groot)
  - [klein](https://translate.google.com/#nl/en/klein)
