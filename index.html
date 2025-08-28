@@ -2,33 +2,48 @@
 <html lang="en">
 
   <head>
+    <meta charset="utf-8">
     <title>Eher</title>
+
+    <!-- Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Backend developer, open-source enthusiast, and proud father of two. Building fair tech and contributing to OSS from the newest state of the Netherlands.">
+    <meta property="og:title" content="Eher">
+    <meta property="og:description" content="Backend developer, open-source enthusiast, and proud father of two. Contributing to Open Source.">
+    <meta property="og:image" content="/favicon.png">
+    <meta name="theme-color" content="#212529">
+
+    <!-- NES.css + FA -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <link rel="shortcut icon" sizes="196x196" href="favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Site assets -->
+    <link rel="icon" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="me" href="https://phpc.social/@eher">
+    <link rel="me" href="https://bolha.us/@eher">
+    <link href="style.css" rel="stylesheet">
   </head>
 
- <body>
+  <body>
     <div id="nescss">
       <header :class="{ sticky: scrollPos > 50 }">
         <div class="container">
           <div class="nav-brand">
-            <a href="/">
-              <h1><i class="snes-logo brand-logo"></i>Eher</h1>
+            <a href="/" aria-label="Home">
+              <h1><i class="snes-logo brand-logo" aria-hidden="true"></i>Eher</h1>
             </a>
             <p>Contributing to Open Source</p>
           </div>
+
           <div class="social-buttons">
             <div>
-              <a href="https://phpc.social/@eher" target="_blank"><i class="nes-icon twitter"></i></a>
-              <a href="https://github.com/EHER" target="_blank"><i class="nes-icon github"></i></a>
-              <a href="https://www.linkedin.com/in/developeher/" target="_blank"><i class="nes-icon linkedin"></i></a>
-              <a href="https://matrix.to/#/@eher:matrix.org" target="_blank"><i class="nes-icon whatsapp"></i></a>
-            </div
+              <a class="nes-icon" aria-label="GitHub" rel="noopener" target="_blank" href="https://github.com/EHER" title="GitHub"> <i class="fa-brands fa-github" aria-hidden="true"></i> </a>
+              <a class="nes-icon" aria-label="LinkedIn" rel="noopener" target="_blank" href="https://www.linkedin.com/in/developeher/" title="LinkedIn"> <i class="fa-brands fa-linkedin" aria-hidden="true"></i> </a>
+              <a class="nes-icon" aria-label="Mastodon" rel="me noopener" target="_blank" href="https://phpc.social/@eher" title="Mastodon"> <i class="fa-brands fa-mastodon" aria-hidden="true"></i> </a>
+              <a class="nes-icon" aria-label="Signal" rel="noopener" target="_blank" href="https://signal.me/#eu/-f4lK4lcmpDAGwI3H87_gMBnty6iugPygWo-0yQR54zcqHTHQ9BHbYxu9h4QZ8Y_" title="Signal"> <i class="fa-solid fa-comment-dots" aria-hidden="true"></i> </a>
+            </div>
           </div>
         </div>
       </header>
@@ -39,35 +54,23 @@
           <!-- About -->
           <section class="topic">
             <h2 id="about"><a href="#about">#</a>About</h2>
-	    <p>Backend developer, non-influencer, open source enthusiast, and
-	    proud father of two. Currently living in the newest state of the
-	    Netherlands.</p>
+            <p>Backend developer, open-source enthusiast, and proud father of two. Currently living in the newest state of the Netherlands.</p>
           </section>
 
           <!-- Open Source -->
           <section class="topic">
             <h2 id="open-source"><a href="#open-source">#</a>Open Source</h2>
-	    <p>I’m a self-taught programmer, having honed my skills through
-	    countless hours of reading documentation and diving into source
-	    code. Throughout my career, I’ve been fortunate to grow and learn,
-	    thanks to the incredible people I’ve met along the way.</p>
-	    <p>I’m passionate about creating a world where everyone has access
-	    to the same opportunities to learn and grow. Contributing to Open
-	    Source is my way of giving back and helping others on their
-	    journey.</p>
-	    <p>If you're interested in a community of like-minded individuals,
-	    check out the <a href="https://github.com/codelicia">Codelicia
-	    Amazing Coders Group</a>.</p>
+            <p>Self-taught by reading docs and digging through source code. I have grown thanks to generous people and communities I met along the way. </p>
+            <p>I believe learning opportunities should be accessible to everyone. Contributing to Open Source is how I give back, so others can climb faster than I did. You can find my projects and contributions on <a href="https://github.com/EHER" target="_blank" rel="noopener">GitHub</a>.</p>
           </section>
-
         </main>
 
         <footer>
           <p>Site free of cookies</p>
         </footer>
-
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 
