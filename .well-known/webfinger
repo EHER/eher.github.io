@@ -1,0 +1,10 @@
+{
+  "subject": "acct:social@eher.com.br",
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://social.eher.com.br/users/social"
+    }
+  ]
+}
