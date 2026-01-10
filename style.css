@@ -36,7 +36,7 @@ header>.container>.nav-brand {
   margin-right: auto;
 }
 
-header>.container>.social-button {
+header>.container>.social-buttons {
   margin-left: auto;
 }
 
@@ -94,6 +94,49 @@ h2 > a {
   margin-bottom: 3rem;
 }
 
+.service-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 2rem;
+}
+
+.service-card {
+  padding: 1rem;
+}
+
+.service-card .title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  margin: 0 0 0.5rem 0;
+}
+
+.service-card a {
+  display: inline-block;
+  word-break: break-word;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.portfolio-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
 /* Scroll back to top */
 .scroll-btn {
   position: fixed;
@@ -123,6 +166,10 @@ img.lazy {
 }
 
 @media screen and (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
   body {
     margin: 2rem 0.5rem;
     padding: 0;
@@ -146,4 +193,3 @@ img.lazy {
     margin-top: 190px;
   }
 }
-
