@@ -132,6 +132,22 @@ h2 > a {
   gap: 0.5rem;
 }
 
+.service-actions-stack {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-actions-main {
+  width: 100%;
+}
+
+.service-actions-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+
 .portfolio-list {
   margin: 0;
   padding-left: 1.25rem;
