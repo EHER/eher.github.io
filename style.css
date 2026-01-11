@@ -25,7 +25,7 @@ header {
 
 header>.container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   max-width: 980px;
   margin: 0 auto;
   padding-top: 1rem;
@@ -52,6 +52,7 @@ header>.container>.social-buttons {
 .social-buttons p {
   margin-bottom: 0;
 }
+
 
 /* Header-sticky */
 header.sticky>.container {
@@ -103,6 +104,13 @@ h2 > a {
 
 .service-card {
   padding: 1rem;
+}
+
+.nes-container {
+  background-color: #fff;
+}
+
+.nes-btn {
 }
 
 .service-card .title {
@@ -173,6 +181,114 @@ h2 > a {
 
 img.lazy {
   background-color: #D3D3D3;
+}
+
+body[data-theme="dark"] {
+  background-color: #0f1115;
+  color: #e6e6e6;
+}
+
+body[data-theme="dark"] header {
+  border-bottom-color: #3a3f4b;
+  background-color: #0f1115;
+}
+
+body[data-theme="dark"] .nav-brand > a {
+  color: #f8fafc;
+}
+
+body[data-theme="dark"] footer a {
+  color: #cbd5e1;
+}
+
+body[data-theme="dark"] .nes-container {
+  background-color: #0f1115;
+  border-color: #3a3f4b;
+  color: #e6e6e6;
+}
+
+body[data-theme="dark"] .nes-container.with-title > .title {
+  background-color: #0f1115;
+}
+
+body[data-theme="dark"] img.lazy {
+  background-color: #2a2f3a;
+}
+
+body[data-theme="dark"] .nes-btn {
+  background-color: #1b202a;
+  color: #e6e6e6;
+}
+
+body[data-theme="dark"] .nes-btn.is-primary {
+  background-color: #1d365f;
+}
+
+body[data-theme="dark"] .nes-btn.is-success {
+  background-color: #1f4d3a;
+}
+
+body[data-theme="dark"] .nes-btn.is-warning {
+  background-color: #6b4a1a;
+}
+
+body[data-theme="dark"] .nes-btn.is-error {
+  background-color: #5a1f24;
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme]) {
+    background-color: #0f1115;
+    color: #e6e6e6;
+  }
+
+  body:not([data-theme]) header {
+    border-bottom-color: #3a3f4b;
+    background-color: #0f1115;
+  }
+
+  body:not([data-theme]) .nav-brand > a {
+    color: #f8fafc;
+  }
+
+  body:not([data-theme]) footer a {
+    color: #cbd5e1;
+  }
+
+  body:not([data-theme]) .nes-container {
+    background-color: #0f1115;
+    border-color: #3a3f4b;
+    color: #e6e6e6;
+  }
+
+  body:not([data-theme]) .nes-container.with-title > .title {
+    background-color: #0f1115;
+  }
+
+  body:not([data-theme]) img.lazy {
+    background-color: #2a2f3a;
+  }
+
+  body:not([data-theme]) .nes-btn {
+    background-color: #1b202a;
+    color: #e6e6e6;
+  }
+
+  body:not([data-theme]) .nes-btn.is-primary {
+    background-color: #1d365f;
+  }
+
+  body:not([data-theme]) .nes-btn.is-success {
+    background-color: #1f4d3a;
+  }
+
+  body:not([data-theme]) .nes-btn.is-warning {
+    background-color: #6b4a1a;
+  }
+
+  body:not([data-theme]) .nes-btn.is-error {
+    background-color: #5a1f24;
+  }
 }
 
 @media screen and (max-width: calc(980px - 4rem)) {
