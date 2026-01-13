@@ -61,13 +61,13 @@ const onThemeKeydown = (event) => {
   }
 };
 
-const setupXmppFallback = () => {
-  const xmppLink = document.querySelector('[data-xmpp-fallback]');
-  if (!xmppLink) {
+const setupFallbackLink = (selector, dataKey) => {
+  const link = document.querySelector(selector);
+  if (!link) {
     return;
   }
-  xmppLink.addEventListener('click', (event) => {
-    const fallbackUrl = xmppLink.dataset.xmppFallback;
+  link.addEventListener('click', (event) => {
+    const fallbackUrl = link.dataset[dataKey];
     if (!fallbackUrl) {
       return;
     }
@@ -78,7 +78,7 @@ const setupXmppFallback = () => {
     };
     window.addEventListener('blur', cancelFallback, { once: true });
     document.addEventListener('visibilitychange', cancelFallback, { once: true });
-    window.location.href = xmppLink.href;
+    window.location.href = link.href;
     window.setTimeout(() => {
       if (shouldFallback) {
         window.location.href = fallbackUrl;
@@ -96,4 +96,5 @@ if (themeToggle) {
 }
 updateStickyHeader();
 updateThemeToggle(getPreferredTheme());
-setupXmppFallback();
+setupFallbackLink('[data-xmpp-fallback]', 'xmppFallback');
+setupFallbackLink('[data-irc-fallback]', 'ircFallback');
