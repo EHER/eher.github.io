@@ -61,6 +61,32 @@ const onThemeKeydown = (event) => {
   }
 };
 
+const setupXmppFallback = () => {
+  const xmppLink = document.querySelector('[data-xmpp-fallback]');
+  if (!xmppLink) {
+    return;
+  }
+  xmppLink.addEventListener('click', (event) => {
+    const fallbackUrl = xmppLink.dataset.xmppFallback;
+    if (!fallbackUrl) {
+      return;
+    }
+    event.preventDefault();
+    let shouldFallback = true;
+    const cancelFallback = () => {
+      shouldFallback = false;
+    };
+    window.addEventListener('blur', cancelFallback, { once: true });
+    document.addEventListener('visibilitychange', cancelFallback, { once: true });
+    window.location.href = xmppLink.href;
+    window.setTimeout(() => {
+      if (shouldFallback) {
+        window.location.href = fallbackUrl;
+      }
+    }, 700);
+  });
+};
+
 document.addEventListener('scroll', updateStickyHeader);
 document.addEventListener('keydown', onThemeKeydown);
 if (themeToggle) {
@@ -70,3 +96,4 @@ if (themeToggle) {
 }
 updateStickyHeader();
 updateThemeToggle(getPreferredTheme());
+setupXmppFallback();
