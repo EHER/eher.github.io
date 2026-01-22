@@ -62,28 +62,30 @@ const onThemeKeydown = (event) => {
 };
 
 const setupFallbackLink = (selector, dataKey) => {
-  const link = document.querySelector(selector);
-  if (!link) {
+  const links = document.querySelectorAll(selector);
+  if (!links.length) {
     return;
   }
-  link.addEventListener('click', (event) => {
-    const fallbackUrl = link.dataset[dataKey];
-    if (!fallbackUrl) {
-      return;
-    }
-    event.preventDefault();
-    let shouldFallback = true;
-    const cancelFallback = () => {
-      shouldFallback = false;
-    };
-    window.addEventListener('blur', cancelFallback, { once: true });
-    document.addEventListener('visibilitychange', cancelFallback, { once: true });
-    window.location.href = link.href;
-    window.setTimeout(() => {
-      if (shouldFallback) {
-        window.location.href = fallbackUrl;
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const fallbackUrl = link.dataset[dataKey];
+      if (!fallbackUrl) {
+        return;
       }
-    }, 700);
+      event.preventDefault();
+      let shouldFallback = true;
+      const cancelFallback = () => {
+        shouldFallback = false;
+      };
+      window.addEventListener('blur', cancelFallback, { once: true });
+      document.addEventListener('visibilitychange', cancelFallback, { once: true });
+      window.location.href = link.href;
+      window.setTimeout(() => {
+        if (shouldFallback) {
+          window.location.href = fallbackUrl;
+        }
+      }, 700);
+    });
   });
 };
 
