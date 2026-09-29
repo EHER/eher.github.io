@@ -43,7 +43,7 @@
               <a class="nes-icon" aria-label="Forgejo" rel="noopener" target="_blank" href="https://git.eher.com.br/EHER" title="Forgejo"> <i class="fa-solid fa-code-branch" aria-hidden="true"></i> </a>
               <a class="nes-icon" aria-label="Fediverse" rel="me noopener" target="_blank" href="https://eher.com.br/@social" title="Fediverse"> <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> </a>
               <a class="nes-icon" aria-label="IRC" rel="noopener" target="_blank" href="ircs://irc.eher.com.br:6697" title="IRC" data-irc-fallback="https://irc.eher.com.br"> <i class="fa-solid fa-hashtag" aria-hidden="true"></i> </a>
-              <a class="nes-icon" aria-label="XMPP" rel="noopener" target="_blank" href="xmpp:chat@eher.com.br" title="XMPP" data-xmpp-fallback="https://chat.eher.com.br/#converse/chat?jid=chat@eher.com.br"> <i class="fa-solid fa-comments" aria-hidden="true"></i> </a>
+              <a class="nes-icon" aria-label="XMPP" rel="noopener" target="_blank" href="xmpp:chat@eher.com.br" title="XMPP" data-xmpp-fallback="https://chat.eher.com.br/app"> <i class="fa-solid fa-comments" aria-hidden="true"></i> </a>
             </div>
           </div>
         </div>
@@ -93,19 +93,16 @@
                 </div>
               </div>
               <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-comments" aria-hidden="true"></i> Prosody (XMPP)</p>
-                <p>XMPP server for community chat.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://chat.eher.com.br" target="_blank" rel="noopener">chat.eher.com.br</a>
-                  <a class="nes-btn is-success" href="xmpp:chat@eher.com.br">chat@eher.com.br</a>
-                </div>
-              </div>
-              <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-user-check" aria-hidden="true"></i> XMPP Guest</p>
-                <p>Guest access to the XMPP server. No account needed.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://guest.eher.com.br" target="_blank" rel="noopener">guest.eher.com.br</a>
-                  <a class="nes-btn is-success" href="xmpp:geral@chat.eher.com.br?join" data-xmpp-fallback="https://guest.eher.com.br/#converse/room?jid=geral@chat.eher.com.br" rel="noopener">geral@chat</a>
+                <p class="title"><i class="fa-solid fa-comments" aria-hidden="true"></i> Chat (XMPP)</p>
+                <p>XMPP server for community chat. Anonymous at the root, account login on the app.</p>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://chat.eher.com.br" target="_blank" rel="noopener">chat.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-success" href="xmpp:chat@eher.com.br" data-xmpp-fallback="https://chat.eher.com.br/app" rel="noopener">chat@eher.com.br</a>
+                    <a class="nes-btn is-success" href="xmpp:geral@chat.eher.com.br?join" data-xmpp-fallback="https://chat.eher.com.br/#converse/room?jid=geral@chat.eher.com.br" rel="noopener">geral@chat.eher.com.br</a>
+                  </div>
                 </div>
               </div>
               <div class="nes-container with-title service-card">
@@ -155,6 +152,13 @@
                 <p>Web radio experiment with fair artist credit.</p>
                 <div class="service-actions">
                   <a class="nes-btn is-primary" href="https://radio.eher.com.br" target="_blank" rel="noopener">radio.eher.com.br</a>
+                </div>
+              </div>
+              <div class="nes-container with-title service-card">
+                <p class="title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> Radar</p>
+                <p>Live air traffic radar with ADS-B data, centered on Lelystad.</p>
+                <div class="service-actions">
+                  <a class="nes-btn is-primary" href="https://radar.eher.com.br" target="_blank" rel="noopener">radar.eher.com.br</a>
                 </div>
               </div>
               <div class="nes-container with-title service-card">
