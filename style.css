@@ -176,11 +176,6 @@ h2 > a {
 }
 
 
-.portfolio-list {
-  margin: 0;
-  padding-left: 1.25rem;
-}
-
 /* Scroll back to top */
 .scroll-btn {
   position: fixed;
@@ -328,6 +323,20 @@ body[data-theme="dark"] .nes-btn.is-error {
 @media screen and (max-width: 768px) {
   .service-grid {
     grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 0.75rem;
+  }
+
+  .service-actions .nes-btn {
+    font-size: clamp(11px, 3vw, 16px);
+    padding: 6px 4px;
+    margin: 2px;
+  }
+
+  .service-card code {
+    font-size: 12px;
   }
 
   body {
