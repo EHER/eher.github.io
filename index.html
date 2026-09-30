@@ -41,7 +41,7 @@
           <div class="social-buttons">
             <div>
               <a class="nes-icon" aria-label="Forgejo" rel="noopener" target="_blank" href="https://git.eher.com.br/EHER" title="Forgejo"> <i class="fa-solid fa-code-branch" aria-hidden="true"></i> </a>
-              <a class="nes-icon" aria-label="Fediverse" rel="me noopener" target="_blank" href="https://eher.com.br/@social" title="Fediverse"> <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> </a>
+              <a class="nes-icon" aria-label="Fediverse @social@eher.com.br" rel="me noopener" target="_blank" href="https://eher.com.br/@social" title="@social@eher.com.br"> <i class="fa-solid fa-share-nodes" aria-hidden="true"></i> </a>
               <a class="nes-icon" aria-label="IRC" rel="noopener" target="_blank" href="ircs://irc.eher.com.br:6697" title="IRC" data-irc-fallback="https://irc.eher.com.br"> <i class="fa-solid fa-hashtag" aria-hidden="true"></i> </a>
               <a class="nes-icon" aria-label="XMPP" rel="noopener" target="_blank" href="xmpp:chat@eher.com.br" title="XMPP" data-xmpp-fallback="https://chat.eher.com.br/app"> <i class="fa-solid fa-comments" aria-hidden="true"></i> </a>
             </div>
@@ -55,32 +55,24 @@
           <!-- About -->
           <section class="topic">
             <h2 id="about"><a href="#about">#</a>About</h2>
-            <p>Backend developer, open-source enthusiast, and proud father of two. Currently living in the newest state of the Netherlands.</p>
+            <p>Backend developer, open-source enthusiast, and proud father of two. Currently living in Flevoland, the newest province of the Netherlands. You can also find me on the fediverse as <a href="https://eher.com.br/@social" target="_blank" rel="noopener">@social@eher.com.br</a>.</p>
           </section>
 
           <!-- Open Source -->
           <section class="topic">
             <h2 id="open-source"><a href="#open-source">#</a>Open Source</h2>
-            <p>I believe learning opportunities should be accessible to everyone. Contributing to Open Source is how I give back, so others can climb faster than I did. You can find my projects and contributions on <a href="https://git.eher.com.br/EHER" target="_blank" rel="noopener">Forgejo</a>, plus older projects on <a href="https://github.com/EHER" target="_blank" rel="noopener">GitHub</a>.</p>
+            <p>I believe learning opportunities should be accessible to everyone. Contributing to Open Source is how I give back, so others can climb faster than I did. Most of my current work lives on <a href="https://git.eher.com.br/EHER" target="_blank" rel="noopener">Forgejo</a>, including nuVim, with older projects archived on <a href="https://github.com/EHER" target="_blank" rel="noopener">GitHub</a>.</p>
           </section>
 
           <!-- Self-Hosted -->
           <section class="topic">
             <h2 id="self-hosted"><a href="#self-hosted">#</a>Self-Hosted</h2>
-            <p>Public services I run to support community, experimentation, and open-source visibility. Most are built and operated from my <a href="https://git.eher.com.br/EHER/selfhost" target="_blank" rel="noopener">selfhost</a> repo.</p>
+            <p>Public services I run to support community, experimentation, and open-source visibility. Cards with a Source button link to the repo behind that service; much of the infrastructure lives in my <a href="https://git.eher.com.br/EHER/selfhost" target="_blank" rel="noopener">selfhost</a> repo.</p>
 
             <div class="service-grid">
               <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-brands fa-mastodon" aria-hidden="true"></i> GoToSocial</p>
-                <p>Mastodon alternative to access the fediverse.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://social.eher.com.br" target="_blank" rel="noopener">social.eher.com.br</a>
-                  <a class="nes-btn is-success" href="https://eher.com.br/@social" target="_blank" rel="noopener">@social</a>
-                </div>
-              </div>
-              <div class="nes-container with-title service-card">
                 <p class="title"><i class="fa-solid fa-comment-dots" aria-hidden="true"></i> IRC EherNet</p>
-                <p>Personal server for tests and experiments.</p>
+                <p>IRC server with a guest client at the root and registered sessions in the app.</p>
                 <div class="service-actions service-actions-stack">
                   <div class="service-actions-main">
                     <a class="nes-btn is-primary" href="https://irc.eher.com.br" target="_blank" rel="noopener">irc.eher.com.br</a>
@@ -100,6 +92,7 @@
                     <a class="nes-btn is-primary" href="https://chat.eher.com.br" target="_blank" rel="noopener">chat.eher.com.br</a>
                   </div>
                   <div class="service-actions-secondary">
+                    <a class="nes-btn is-warning" href="https://chat.eher.com.br/app" target="_blank" rel="noopener">App</a>
                     <a class="nes-btn is-success" href="xmpp:chat@eher.com.br" data-xmpp-fallback="https://chat.eher.com.br/app" rel="noopener">chat@eher.com.br</a>
                     <a class="nes-btn is-success" href="xmpp:geral@chat.eher.com.br?join" data-xmpp-fallback="https://chat.eher.com.br/#converse/room?jid=geral@chat.eher.com.br" rel="noopener">geral@chat.eher.com.br</a>
                   </div>
@@ -108,29 +101,61 @@
               <div class="nes-container with-title service-card">
                 <p class="title"><i class="fa-solid fa-terminal" aria-hidden="true"></i> SSH Chat</p>
                 <p>Simple SSH chat bridged to IRC and XMPP: <code>ssh ssh.eher.com.br -p 1234</code>.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="ssh://ssh.eher.com.br:1234">ssh.eher.com.br</a>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="ssh://ssh.eher.com.br:1234">ssh.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-success" href="https://git.eher.com.br/EHER/selfhost/src/branch/main/sshchat" target="_blank" rel="noopener">Source</a>
+                  </div>
                 </div>
               </div>
               <div class="nes-container with-title service-card">
                 <p class="title"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> Forgejo</p>
-                <p>Forge to version projects and experiments with transparency.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://git.eher.com.br" target="_blank" rel="noopener">git.eher.com.br</a>
-                </div>
-              </div>
-              <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-video" aria-hidden="true"></i> Galene</p>
-                <p>Video, voice, and screen sharing for classes and meetings.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://meet.eher.com.br" target="_blank" rel="noopener">meet.eher.com.br</a>
+                <p>Forge to version projects and experiments with transparency. Public browsing, sign in to contribute.</p>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://git.eher.com.br" target="_blank" rel="noopener">git.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-warning" href="https://git.eher.com.br/user/login" target="_blank" rel="noopener">Sign in</a>
+                  </div>
                 </div>
               </div>
               <div class="nes-container with-title service-card">
                 <p class="title"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Search</p>
-                <p>Private search endpoint for quick lookups.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://search.eher.com.br" target="_blank" rel="noopener">search.eher.com.br</a>
+                <p>Self-hosted SearXNG instance for private, quick lookups.</p>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://search.eher.com.br" target="_blank" rel="noopener">search.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-warning" href="https://search.eher.com.br/preferences" target="_blank" rel="noopener">Preferences</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nes-container with-title service-card">
+                <p class="title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> Radar</p>
+                <p>Live air traffic radar with ADS-B data, centered on Lelystad.</p>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://radar.eher.com.br" target="_blank" rel="noopener">radar.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-success" href="https://git.eher.com.br/EHER/selfhost/src/branch/main/radar" target="_blank" rel="noopener">Source</a>
+                  </div>
+                </div>
+              </div>
+              <div class="nes-container with-title service-card">
+                <p class="title"><i class="fa-solid fa-broadcast-tower" aria-hidden="true"></i> Radio</p>
+                <p>Web radio experiment with fair artist credit.</p>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://radio.eher.com.br" target="_blank" rel="noopener">radio.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-success" href="https://git.eher.com.br/EHER/selfhost/src/branch/main/radio" target="_blank" rel="noopener">Source</a>
+                  </div>
                 </div>
               </div>
               <div class="nes-container with-title service-card">
@@ -141,62 +166,31 @@
                 </div>
               </div>
               <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-note-sticky" aria-hidden="true"></i> Notes</p>
-                <p>Study plan and growth notes shared in a transparent way.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://notes.eher.com.br" target="_blank" rel="noopener">notes.eher.com.br</a>
-                </div>
-              </div>
-              <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-broadcast-tower" aria-hidden="true"></i> Radio</p>
-                <p>Web radio experiment with fair artist credit.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://radio.eher.com.br" target="_blank" rel="noopener">radio.eher.com.br</a>
-                </div>
-              </div>
-              <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-satellite-dish" aria-hidden="true"></i> Radar</p>
-                <p>Live air traffic radar with ADS-B data, centered on Lelystad.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://radar.eher.com.br" target="_blank" rel="noopener">radar.eher.com.br</a>
-                </div>
-              </div>
-              <div class="nes-container with-title service-card">
                 <p class="title"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i> Tetris</p>
                 <p>Play Tetris on the web with ranking and a multiplayer vibe.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://tetris.eher.com.br" target="_blank" rel="noopener">tetris.eher.com.br</a>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://tetris.eher.com.br" target="_blank" rel="noopener">tetris.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-success" href="https://git.eher.com.br/EHER/tetris" target="_blank" rel="noopener">Source</a>
+                  </div>
                 </div>
               </div>
               <div class="nes-container with-title service-card">
                 <p class="title"><i class="fa-solid fa-chess" aria-hidden="true"></i> Chess</p>
-                <p>Play chess directly in the browser.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://chess.eher.com.br" target="_blank" rel="noopener">chess.eher.com.br</a>
+                <p>Play chess directly in the browser. A bot keeps a match running in IRC <code>#chess</code>.</p>
+                <div class="service-actions service-actions-stack">
+                  <div class="service-actions-main">
+                    <a class="nes-btn is-primary" href="https://chess.eher.com.br" target="_blank" rel="noopener">chess.eher.com.br</a>
+                  </div>
+                  <div class="service-actions-secondary">
+                    <a class="nes-btn is-success" href="https://git.eher.com.br/EHER/chess" target="_blank" rel="noopener">Source</a>
+                    <a class="nes-btn is-warning" href="https://irc.eher.com.br/?channels=%23chess" target="_blank" rel="noopener">#chess</a>
+                  </div>
                 </div>
               </div>
-              <div class="nes-container with-title service-card">
-                <p class="title"><i class="fa-solid fa-robot" aria-hidden="true"></i> IRC Chess Bot</p>
-                <p>Keeps a chess match running in the IRC <code>#chess</code> channel.</p>
-                <div class="service-actions">
-                  <a class="nes-btn is-primary" href="https://irc.eher.com.br/?channels=%23chess" target="_blank" rel="noopener">#chess</a>
-                </div>
-              </div>
-              </div>
-          </section>
-
-          <!-- Projects -->
-          <section class="topic">
-            <h2 id="projects"><a href="#projects">#</a>Projects</h2>
-            <p>Independent repos I keep around for fun, learning, and community sharing.</p>
-            <ul class="portfolio-list">
-              <li><a href="https://git.eher.com.br/EHER/notes" target="_blank" rel="noopener">Notes</a></li>
-              <li><a href="https://git.eher.com.br/EHER/nuVim" target="_blank" rel="noopener">nuVim</a></li>
-              <li><a href="https://git.eher.com.br/EHER/selfhost/src/branch/main/radio" target="_blank" rel="noopener">Radio</a></li>
-              <li><a href="https://git.eher.com.br/EHER/tetris" target="_blank" rel="noopener">Tetris</a></li>
-              <li><a href="https://git.eher.com.br/EHER/chess" target="_blank" rel="noopener">Chess</a></li>
-              <li><a href="https://git.eher.com.br/EHER/irc-chess-bot" target="_blank" rel="noopener">IRC Chess Bot</a></li>
-            </ul>
+            </div>
           </section>
         </main>
 
@@ -241,7 +235,7 @@
         </div>
 
         <footer>
-          <p>Site free of cookies</p>
+          <p>No cookies. No trackers.</p>
         </footer>
       </div>
     </div>
